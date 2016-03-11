@@ -190,6 +190,7 @@ html,body{
 	margin-left:1.5vh;
 	padding:15px;
 	height:5vh;
+    cursor:pointer;
 }
 
 .li-nav > a{
@@ -199,7 +200,11 @@ html,body{
 
 a:hover{
 	text-decoration: none !important;
-	color:#00aeef !important;
+}
+
+.li-nav:hover,a:hover{
+    background-color:#4aa3df;
+    text-decoration: none !important;
 }
 
 .nav-heading{
@@ -241,4 +246,42 @@ hr{
 
 .white{
     border-color:#ffffff !important;
+}
+.well_current_projects{
+    background:none !important;
+    border:none !important;
+    padding:0px !important;
+
+}
+
+.well_projects_options{
+    background:none !important;
+    border:none !important;
+    margin-top:2vh;
+    padding:0px !important;
+
+}
+
+.tool{
+    float:left;
+}
+
+.tool_image{
+    background:#e74c3c;
+    padding:1vw;
+    display:inline-block;
+}
+
+.tool_image > img{
+    height:150px;
+    width:150px;
+}
+
+#inner-options{
+    padding:1vw;
+}
+
+.tool_text{
+    font-size:1.5em;
+    text-align:center;
 }

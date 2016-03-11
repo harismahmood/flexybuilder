@@ -27,7 +27,9 @@
                 <div class="nav-heading">~Navigation~</div>
                 <ul id="ul-nav">
                     <hr>
-                    <li class="li-nav animated slideInRight"><a href="/login/logout"><i class="fa fa-sign-out"></i><div class="pull-right">Logout</div></a></li>
+                    <a href="/home"><li class="li-nav animated slideInRight"><i class="fa fa-pencil"></i><div class="pull-right">Site Designer</div></li></a>
+                    <a href="/analytics"><li class="li-nav animated slideInRight"><i class="fa fa-line-chart"></i><div class="pull-right">Analytics</div></li></a>
+                    <a href="/login/logout"><li class="li-nav animated slideInRight"><i class="fa fa-sign-out"></i><div class="pull-right">Logout</div></li></a>
                     <hr>
                 </ul>
                 <div id="navigation-bottom">
@@ -52,6 +54,7 @@
             }
 
            $.post('/ajax/colorget',{id:{{ $user->id }},_token:'{{ csrf_token() }}'},function(data){
+               //White
                if (data == 0){
                    $("body").removeAttr('id');
                    $("body").attr('id','white');
@@ -60,15 +63,16 @@
                    $(".white-toggle").css('border','1px solid #00aeef');
                    $(".black-toggle").css('border','none');
                    $("hr").addClass('black');
-                   $(".li-nav > a ").css('color','#000000');
+                   $("a").css('color','#000000');
                    $(".heading ").css('color','#000000');
                }
+               //Black
                 if (data == 1) {
                     $("body").attr('id',"main");
                     $(".black-toggle").css('border','1px solid #00aeef');
                     $(".white-toggle").css('border','none');
                     $("hr").removeClass('black');
-                    $(".li-nav > a ").css('color','#ffffff');
+                    $("a").css('color','#ffffff');
                     $(".heading ").css('color','#ffffff');
                 }
             });
@@ -81,7 +85,7 @@
                 $(".black-toggle").css('border','none');
 			    $(".white-toggle").css('border','1px solid #00aeef');
 			    $(".black-toggle").css('border','none');
-                $(".li-nav > a ").css('color','#000000');
+                $("a").css('color','#000000');
                 $(".heading ").css('color','#000000');
                 colorUpd('0');
 			});
@@ -91,7 +95,7 @@
 			    $(".black-toggle").css('border','1px solid #00aeef');
 			    $(".white-toggle").css('border','none');
                 $("hr").removeClass('black');
-                $(".li-nav > a ").css('color','#ffffff');
+                $("a").css('color','#ffffff');
                 $(".heading ").css('color','#ffffff');
                 colorUpd('1');
             });
