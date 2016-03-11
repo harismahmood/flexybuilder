@@ -21,7 +21,7 @@
                     {{ csrf_field() }}
                     <input type="submit" class="btn btn-md black no-edge center-block" value="Login" id="submit"/>
                 </form>
-                  <a class="white-text" href="/forgot">Forgot Password????</a>
+                  <a class="white-text" href="/forgot">Forgot Password?</a>
               </div>
           </div>
       </div>
