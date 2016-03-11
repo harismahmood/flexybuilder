@@ -18,7 +18,6 @@
                 <div class="heading animated zoomInUp">FlexyBuilder</div>
                 <div id="hs">v1.0.0</div>
                 <div id="toggle">
-                    Colour Theme:
                     <div class="white-toggle"></div>
                     <div class="black-toggle"></div>
                 </div>
@@ -61,12 +60,16 @@
                    $(".white-toggle").css('border','1px solid #00aeef');
                    $(".black-toggle").css('border','none');
                    $("hr").addClass('black');
+                   $(".li-nav > a ").css('color','#000000');
+                   $(".heading ").css('color','#000000');
                }
                 if (data == 1) {
                     $("body").attr('id',"main");
                     $(".black-toggle").css('border','1px solid #00aeef');
                     $(".white-toggle").css('border','none');
                     $("hr").removeClass('black');
+                    $(".li-nav > a ").css('color','#ffffff');
+                    $(".heading ").css('color','#ffffff');
                 }
             });
 
@@ -78,6 +81,8 @@
                 $(".black-toggle").css('border','none');
 			    $(".white-toggle").css('border','1px solid #00aeef');
 			    $(".black-toggle").css('border','none');
+                $(".li-nav > a ").css('color','#000000');
+                $(".heading ").css('color','#000000');
                 colorUpd('0');
 			});
 			
@@ -86,6 +91,8 @@
 			    $(".black-toggle").css('border','1px solid #00aeef');
 			    $(".white-toggle").css('border','none');
                 $("hr").removeClass('black');
+                $(".li-nav > a ").css('color','#ffffff');
+                $(".heading ").css('color','#ffffff');
                 colorUpd('1');
             });
 		});
