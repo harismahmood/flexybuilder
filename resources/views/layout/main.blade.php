@@ -8,13 +8,12 @@
         <link rel="stylesheet" href="{{ url('css/app.css') }}" />
         <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}" />
         <link rel="stylesheet" href="{{ url('css/animate.css') }}" />
+        <link rel="stylesheet" href="{{ url('css/normal.css') }}" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
         <title>@yield('title')</title>
     </head>
     <body id="main">
     <div class="loading"><div class="animated fadeIn infinite"><img src="{{ url('img/loading.png') }}" class="loading-image img-responsive" /></div></div>
-    <div class="container-fluid">
-        <div class="row">
             <div id="topbar" class="animated slideInDown">
                 <div class="heading animated zoomInUp">FlexyBuilder</div>
                 <div id="hs">v1.0.0</div>
@@ -39,8 +38,6 @@
             <div id="content" class="animated slideInRight">
                 @yield('content')
             </div>
-        </div>
-    </div>
     @yield('body')
     <script src="{{ url('js/jquery.min.js') }}"></script>
     <script src="{{ url('js/bootstrap.min.js') }}"></script>

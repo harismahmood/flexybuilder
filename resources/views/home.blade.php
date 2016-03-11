@@ -6,7 +6,4 @@
 @endsection
 @section('scripts')
     <script src="{{ url('js/vl.js') }}"></script>
-    <script>
-        $("#loginForm").validate();
-    </script>
 @endsection
