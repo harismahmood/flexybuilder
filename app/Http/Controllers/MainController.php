@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Session;
 use Auth;
-use User;
 class MainController extends Controller
 {
 
@@ -20,4 +19,14 @@ class MainController extends Controller
            return redirect('/login');
        }
    }
+
+    public function build(){
+        if (Auth::check()){
+            $user = Auth::user();
+            return view('builder')->with(compact('user'));
+        }
+        else{
+            return redirect('/login');
+        }
+    }
 }
