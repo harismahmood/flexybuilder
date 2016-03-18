@@ -19,12 +19,12 @@
             </div>
         </div>
     </div>
-	<div class="bottom-right">
-          <h4>©HSTech.</h4>
-      </div>
-	  <div class="bottom-left">
-          <h4>v1.0.0</h4>
-      </div>
+    <div class="bottom">   <div class="pull-left">
+            <h4>v1.0.0</h4>
+        </div>
+        <div class="pull-right">
+            <h4>©HSTech.</h4>
+        </div></div>
 @endsection
 @section('scripts')
     <script src="{{ url('js/vl.js') }}"></script>
