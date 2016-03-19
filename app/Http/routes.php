@@ -15,9 +15,6 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
-Route::get('/ui',function(){
-	return view('ui');
-});
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -44,5 +41,7 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::post('/ajax/colorget','AjaxController@colorGet');
 
+    Route::get('/builder','MainController@builderPage');
 
+    Route::get('/builder_init','MainController@builder');
 });

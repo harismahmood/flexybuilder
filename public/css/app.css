@@ -380,12 +380,11 @@ hr{
     width:100%;
     min-height:95vh !important;
     background-color:#ffffff;
-    position: relative;
 }
 
 #canvas-header{
     border:1px black dotted;
-    border-top:1px black solid;
+    position: relative;
     height:15vh;
     margin:0px;
     padding:0px;
@@ -410,6 +409,8 @@ hr{
 }
 
 #canvas-footer{
+    border-left:1px black dotted;
+    border-right:1px black dotted;
     border-top:1px black dotted;
     min-height:15vh;
     margin:0px;
@@ -501,7 +502,7 @@ i:hover{
     width:8vw;
     background-color:#16a085;
     height:4vh;
-    left:26.9vw;
+    left:21.9vw;
     top:30vh;
     padding:5px;
     border-radius:5px;
@@ -513,6 +514,10 @@ i:hover{
     font-family: sans-serif;
     cursor:pointer;
     display:none;
+}
+
+#toolbox-button-hide:hover,#toolbox-button-show:hover{
+    background-color: #00aeef;
 }
 
 #menu-box{
@@ -527,4 +532,35 @@ i:hover{
     -moz-box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
     display:none;
+
 }
+
+.modal-text{
+    color:#ffffff !important;
+}
+
+.modal-title{
+    color: #ffffff !important;
+}
+
+.modal-content{
+    border-radius: 0px !important;
+    background-color:#34495e !important;
+    color: #ffffff !important;
+}
+
+.modal-content > h1 , h2 , h3 , label{
+    color: #ffffff !important;
+}
+
+.modal-button{
+    background-color:#446CB3 !important;
+    color:#FFFFFF !important;
+    border-radius:0px !important;
+}
+
+.close{
+    color: #ffffff !important;
+}
+
+
