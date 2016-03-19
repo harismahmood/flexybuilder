@@ -13,22 +13,24 @@
             <h3>Single Page Designs:</h3>
             <br />
             <div id="tool-plain_page" onmouseenter="enLarge('tool-plain_page')" onmouseleave="deLarge('tool-plain_page')" class="tool">
-                <div class="tool_image">
+               <a href="builder_init?nw=true&pi=false&type=1"> <div class="tool_image">
                     <img class="img-responsive" src="{{ url('img/icons/new.png') }}" />
                 </div>
                 <div class="tool_text">
                     Blank Page
                     <hr>
                 </div>
+               </a>
             </div>
             <div id="tool-landing_page" onmouseenter="enLarge('tool-landing_page')" onmouseleave="deLarge('tool-landing_page')" class="tool">
-                <div class="tool_image">
-                    <img class="img-responsive" src="{{ url('img/icons/landing-page.png') }}" />
-                </div>
-                <div class="tool_text">
-                Landing Page
-                    <hr>
-                </div>
+                <a href="builder_init?nw=true&pi=false&type=2"> <div class="tool_image">
+                        <img class="img-responsive" src="{{ url('img/icons/landing-page.png') }}" />
+                    </div>
+                    <div class="tool_text">
+                        Landing Page
+                        <hr>
+                    </div>
+                </a>
             </div>
         </div>
         </div>
