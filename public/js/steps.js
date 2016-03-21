@@ -92,7 +92,7 @@
 
                 titleStep = $modal.find('[data-step=' + actualStep + ']').data('title');
                 $titleStepSpan = $('<span>')
-                    .addClass('label label-success')
+                    .addClass('counterlabel label label-success')
                     .html(actualStep);
 
                 $modal
@@ -167,6 +167,7 @@
             if (parseInt($actualStep.val()) === steps){
                 $btnNext
                     .attr('data-step', 'complete')
+                    .addClass('complete-btn')
                     .html(settings.btnLastStepHtml);
             } else {
                 $btnNext
@@ -211,7 +212,7 @@
             // Set the title of step
             newTitle = $nextStep.attr('data-title');
             var $titleStepSpan = $('<span>')
-                .addClass('label label-success')
+                .addClass('counterlabel label label-success')
                 .html(nextStep);
 
             $title
