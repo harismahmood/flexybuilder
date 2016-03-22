@@ -39,21 +39,23 @@ function canvasReset(){
 }
 
 function canvasDesktop(){
-    $("#layouts").html('');
+    $("#layouts").hide();
     $("#canvas").show();
     removeIcolor();
     $('.fa-laptop').css('color','#00aeef');
 }
 
 function canvasTablet(){
+    $("#layouts").show();
     $("#layouts").html('');
     $("#canvas").hide();
-    $("#layouts").html('<div id="tablet-device-layout"></div><div onclick="rotateDevice(\'tablet\')" id="rotate-button" title="Rotate Device"><i class="fa fa-circle-o-notch"></i></div>');
+    $("#layouts").html('<div id="iframe-tablet"><iframe width="100%" height="100%"  style="border:none" src="http://riot.design/en/"></iframe></div><div id="tablet-device-layout"></div><div onclick="rotateDevice(\'tablet\')" id="rotate-button" title="Rotate Device"><i class="fa fa-circle-o-notch"></i></div>');
     removeIcolor();
     $(".fa-tablet").css('color','#00aeef');
 }
 
 function canvasMobile(){
+    $("#layouts").show();
     $("#layouts").html('');
     $("#canvas").hide();
     $("#layouts").html('<div id="mobile-device-layout"></div><div onclick="rotateDevice(\'mobile\')" id="rotate-button" title="Rotate Device"><i class="fa fa-circle-o-notch"></i></div>');
@@ -67,12 +69,20 @@ function rotateDevice(device){
     if (device == 'tablet'){
         if (tablet == 0){
             $("#"+device+"-device-layout").rotate(90);
+            $("#"+device+"-device-layout").css('top','25vh');
+            $("#iframe-tablet").css('width','598px');
+            $("#iframe-tablet").css('height','796px');
+            $("#iframe-tablet").css('top','25vh');
             tablet = 1;
 
         }
 
         else {
             $("#"+device+"-device-layout").rotate(0);
+            $("#"+device+"-device-layout").css('top','0');
+            $("#iframe-tablet").css('height','598px');
+            $("#iframe-tablet").css('width','796px');
+            $("#iframe-tablet").css('top','0');
             tablet = 0;
         }
     }

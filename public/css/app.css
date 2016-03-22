@@ -37,12 +37,20 @@ body::-webkit-scrollbar-thumb {
     background: url('../img/bg3.png') !important;
     background-color:#000000;
     color:#ffffff !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #builder{
     background: url('../img/bg3.png') !important;
     background-color:#000000;
     color:#ffffff !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #white{
@@ -460,14 +468,14 @@ hr{
     left:0.5vw;
     display:inline-block;
     position:absolute;
-    z-index:9999;
+    z-index:3;
 }
 
 .right{
     right:1vw;
     display:inline-block;
     position:absolute;
-    z-index:9999;
+    z-index:3;
     top:5px;
 }
 
@@ -507,7 +515,7 @@ i:hover{
     font-family: sans-serif;
     cursor:pointer;
     border-radius: 5px;
-    z-index:9999999;
+    z-index:4;
 }
 
 #toolbox-button-hide{
@@ -544,7 +552,7 @@ i:hover{
     position:absolute;
     top:0px;
     left:0px;
-    z-index:9999;
+    z-index:5;
     -webkit-box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
@@ -588,17 +596,30 @@ i:hover{
     background:url('../img/devices/mobile.png');
     width:314px;
     height:656px;
-    margin:0 auto;
-    margin-top:5vh;
+    position:absolute;
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+    max-width:100%;
+    max-height:100%;
+    overflow:auto;
 }
 
 #tablet-device-layout{
     background:url('../img/devices/tablet.png');
     width:1147px;
     height:672px;
-    margin:0 auto;
-    margin-top:5vh;
+    position:absolute;
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+    max-width:100%;
+    max-height:100%;
+    overflow:auto;
+    z-index:-1;
+
 }
+
 
 #rotate-button{
     position:fixed;
@@ -610,4 +631,23 @@ i:hover{
 
 #rotate-button:hover{
     color:#00aeef;
+}
+
+
+#layouts{
+    height:99vh;
+    width:99vw;
+    display:none;
+}
+
+#iframe-tablet{
+    position:absolute;
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+    max-width:100%;
+    max-height:100%;
+    overflow:hidden;
+    width:796px;
+    height:598px;
 }
